@@ -3,187 +3,201 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>sorry meow :3 🎀</title>
+<title>Amir</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Rock+Salt&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 
 <style>
-/* ---------- BODY & BACKGROUND ---------- */
-body {
-  margin: 0;
-  min-height: 100vh;
-  background: linear-gradient(160deg, #1b001b, #2d0036);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  overflow: hidden;
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%}
+
+/* RESET LINKS (IMPORTANT) */
+a{
+  color:inherit;
+  text-decoration:none;
 }
 
-/* ---------- PARTICLES ---------- */
-.particle {
-  position: absolute;
-  width: 2px;
-  height: 2px;
-  background: #ff69b4;
-  opacity: 0.4;
-  animation: float linear infinite;
-}
-@keyframes float {
-  0% { transform: translateY(110vh); }
-  100% { transform: translateY(-10vh); }
+body{
+  background:linear-gradient(180deg,#0e0e0e,#000);
+  font-family:'Inter',sans-serif;
+  color:#fff;
+  overflow:hidden;
 }
 
-/* ---------- PHONE CARD ---------- */
-.phone {
-  width: 360px;
-  max-width: 92vw;
-  border-radius: 32px;
-  background: rgba(30,0,30,0.85);
-  backdrop-filter: blur(16px);
-  padding: 26px 22px;
-  box-shadow: 0 15px 45px rgba(255,105,180,0.25), inset 0 0 2px rgba(255,255,255,0.05);
-  display: flex;
-  flex-direction: column;
-  border: 1px solid rgba(255,105,180,0.15);
+/* ===== BACKGROUND ICONS ===== */
+.bg-layer{
+  position:fixed;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
 }
 
-/* ---------- TITLE ---------- */
-h1 {
-  text-align: center;
-  font-size: 28px;
-  letter-spacing: 3px;
-  color: #ff69b4;
-  margin: 10px 0 6px;
-  text-shadow: 0 0 6px #ff69b4, 0 0 12px rgba(255,105,180,0.4);
-}
-.cursor { animation: blink 1s infinite; }
-@keyframes blink { 50% { opacity: 0; } }
-
-.subtitle {
-  text-align: center;
-  font-size: 12px;
-  color: #ffb6c1;
-  margin-bottom: 20px;
+.bg-icon{
+  position:absolute;
+  width:140px;
+  opacity:.8;
+  filter:drop-shadow(0 0 35px rgba(255,255,255,.4));
+  animation:drift 25s ease-in-out infinite;
 }
 
-/* ---------- INFO ROWS ---------- */
-.info {
-  flex: 1;
-  font-size: 14px;
+/* positions */
+.k1{top:5%;left:5%}
+.k2{top:35%;left:15%}
+.k3{bottom:15%;left:8%}
+
+.b1{top:10%;right:8%}
+.b2{top:45%;right:20%}
+.b3{bottom:20%;right:12%}
+
+@keyframes drift{
+  0%{transform:translate(0,0)}
+  50%{transform:translate(60px,-40px)}
+  100%{transform:translate(0,0)}
 }
 
-.row {
-  display: flex;
-  justify-content: space-between;
-  padding: 12px 10px;
-  border-bottom: 1px solid rgba(255,105,180,0.1);
-  border-radius: 10px;
-  transition: background 0.25s;
-}
-.row:hover {
-  background: rgba(255,105,180,0.05);
-}
-
-.label { color: #ffb6c1; }
-.value { 
-  color: #ff69b4;
-  text-align: right;
-  max-width: 55%;
-  word-break: break-word;
-  font-weight: 500;
-  text-shadow: 0 0 4px #ff69b4;
+/* ===== CENTER ===== */
+.wrapper{
+  position:relative;
+  z-index:2;
+  width:100%;
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
-/* ---------- FOOTER ---------- */
-.footer {
-  text-align: center;
-  font-size: 11px;
-  color: #ffb6c1;
-  line-height: 1.6;
-  margin-top: 16px;
+/* ===== CARD ===== */
+.card{
+  width:400px;
+  padding:50px 40px;
+  border-radius:30px;
+  background:linear-gradient(180deg,#141414,#070707);
+  border:1px solid rgba(255,255,255,.08);
+  box-shadow:
+    0 60px 180px rgba(0,0,0,1),
+    inset 0 0 40px rgba(255,255,255,.05);
+  text-align:center;
+  animation:float 6s ease-in-out infinite;
 }
 
-/* ---------- RESPONSIVE ---------- */
-@media (max-width: 480px) {
-  .phone {
-    width: 90%;
-    padding: 20px;
-  }
-  h1 { font-size: 24px; }
+@keyframes float{
+  0%{transform:translateY(0)}
+  50%{transform:translateY(-18px)}
+  100%{transform:translateY(0)}
+}
+
+/* ===== AVATAR ===== */
+.avatar{
+  width:140px;
+  height:140px;
+  margin:0 auto 22px;
+  border-radius:50%;
+  overflow:hidden;
+  border:2px solid rgba(255,255,255,.15);
+  box-shadow:0 0 35px rgba(255,255,255,.25);
+}
+
+.avatar img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* ===== TEXT ===== */
+.name{
+  font-family:'Rock Salt',cursive;
+  font-size:2.2rem;
+  margin-bottom:14px;
+}
+
+.desc{
+  font-size:.95rem;
+  line-height:1.7;
+  opacity:.85;
+  margin-bottom:30px;
+}
+
+/* ===== LINKS ===== */
+.link{
+  padding:16px;
+  margin-bottom:14px;
+  border-radius:999px;
+  background:linear-gradient(145deg,#1a1a1a,#0a0a0a);
+  font-size:.85rem;
+  letter-spacing:.15em;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  box-shadow:
+    inset 0 0 15px rgba(255,255,255,.05),
+    0 12px 35px rgba(0,0,0,.9);
+}
+
+.link.clickable{
+  transition:.3s;
+}
+
+.link.clickable:hover{
+  transform:scale(1.08);
+  box-shadow:0 0 35px rgba(255,255,255,.25);
+}
+
+.link.disabled{
+  opacity:.6;
+}
+
+.footer{
+  margin-top:28px;
+  font-size:.65rem;
+  opacity:.5;
 }
 </style>
 </head>
 
 <body>
 
-<div class="phone">
-  <h1 id="title"></h1>
-  <div class="subtitle">iOS 27 Mobile Network Card</div>
+<!-- BACKGROUND ICONS -->
+<div class="bg-layer">
+  <img class="bg-icon k1" src="https://raw.githubusercontent.com/7tournament/starlight/main/IMG_1594.png">
+  <img class="bg-icon k2" src="https://raw.githubusercontent.com/7tournament/starlight/main/IMG_1594.png">
+  <img class="bg-icon k3" src="https://raw.githubusercontent.com/7tournament/starlight/main/IMG_1594.png">
 
-  <div class="info">
-    <div class="row"><span class="label">IPv4</span><span id="ip" class="value">Loading…</span></div>
-    <div class="row"><span class="label">City</span><span id="city" class="value">Loading…</span></div>
-    <div class="row"><span class="label">Region</span><span id="region" class="value">Loading…</span></div>
-    <div class="row"><span class="label">Country</span><span id="country" class="value">Loading…</span></div>
-    <div class="row"><span class="label">ISP</span><span id="isp" class="value">Loading…</span></div>
-    <div class="row"><span class="label">Timezone</span><span id="timezone" class="value">Loading…</span></div>
-  </div>
-
-  <div class="footer">
-    © Carbon — All rights reserved
-  </div>
+  <img class="bg-icon b1" src="https://raw.githubusercontent.com/7tournament/starlight/main/IMG_1595.png">
+  <img class="bg-icon b2" src="https://raw.githubusercontent.com/7tournament/starlight/main/IMG_1595.png">
+  <img class="bg-icon b3" src="https://raw.githubusercontent.com/7tournament/starlight/main/IMG_1595.png">
 </div>
 
-<!-- PARTICLES SCRIPT -->
-<script>
-for(let i=0;i<70;i++){
-  const p=document.createElement("div");
-  p.className="particle";
-  p.style.left=Math.random()*100+"vw";
-  p.style.animationDuration=(5+Math.random()*10)+"s";
-  document.body.appendChild(p);
-}
-</script>
+<div class="wrapper">
+  <div class="card">
 
-<!-- TYPING TITLE -->
-<script>
-(function typeText(){
-  const text="CARBON";
-  let i=0;
-  const title=document.getElementById("title");
-  const cursor=document.createElement("span");
-  cursor.textContent="|";
-  cursor.className="cursor";
-  title.appendChild(cursor);
-  const interval=setInterval(()=>{
-    if(i<text.length){
-      title.insertBefore(document.createTextNode(text[i]), cursor);
-      i++;
-    }else{
-      clearInterval(interval);
-    }
-  },150);
-})();
-</script>
+    <div class="avatar">
+      <img src="https://raw.githubusercontent.com/7tournament/Mywebsite/main/griffith.JPEG">
+    </div>
 
-<!-- IP INFO SCRIPT -->
-<script>
-fetch("https://api.ipify.org?format=json")
-.then(r=>r.json())
-.then(ip=>{
-  document.getElementById("ip").textContent=ip.ip;
-  return fetch("https://ipwho.is/"+ip.ip);
-})
-.then(r=>r.json())
-.then(d=>{
-  city.textContent=d.city||"N/A";
-  region.textContent=d.region||"N/A";
-  country.textContent=d.country||"N/A";
-  isp.textContent=d.connection?.isp||"N/A";
-  timezone.textContent=d.timezone?.id||"N/A";
-})
-.catch(()=>{ document.querySelector(".info").innerHTML="Unable to load network data"; });
-</script>
+    <div class="name">Amir</div>
+
+    <div class="desc">
+      hello this is amir, and im 15 years old and i lift weights,<br>
+      if you want to ask me anything follow my insta / tiktok (:
+    </div>
+
+    <div class="link disabled">
+      <i class="bi bi-discord"></i> @tjzamir
+    </div>
+
+    <a class="link clickable" href="https://www.tiktok.com/@kingdedyn" target="_blank">
+      <i class="bi bi-tiktok"></i> @kingdedyn
+    </a>
+
+    <a class="link clickable" href="https://www.instagram.com/14kvoidzz" target="_blank">
+      <i class="bi bi-instagram"></i> @14kvoidzz
+    </a>
+
+    <div class="footer">Amir © all rights reserved</div>
+  </div>
+</div>
 
 </body>
 </html>
